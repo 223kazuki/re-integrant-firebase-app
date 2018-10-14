@@ -1,0 +1,16 @@
+{:re-integrant-app.module/firebase
+ {:config {:apiKey "AIzaSyCy_dy_JBN6LP2Xt85wj7TjWBBsanXAArE",
+           :authDomain "re-integrant-app.firebaseapp.com",
+           :databaseURL "https://re-integrant-app.firebaseio.com",
+           :projectId "re-integrant-app",
+           :storageBucket "re-integrant-app.appspot.com",
+           :messagingSenderId "30319422621"}}
+
+ :re-integrant-app.module/router
+ ["/" {""       :home
+       "about"  :about}]
+
+ :re-integrant-app.module/app
+ {:mount-point-id "app"
+  :routes #ig/ref :re-integrant-app.module/router
+  :moment #ig/ref :re-integrant-app.module/firebase}}
